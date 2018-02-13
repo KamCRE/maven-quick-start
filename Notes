@@ -1,0 +1,55 @@
+MAVEN TUTORIAL
+
+git config --global user.name "Your Name"
+git config --global user.email "your@email.com"
+
+###export PATH=/opt/apache-maven-3.5.2/bin:$PATH
+
+
+cd /opt
+sudo tar -xvzf ~/Downloads/apache-maven-3.5.0-bin.tar.gz
+
+
+
+sudo ln -s apache-maven-3.5.2/ maven
+sudo subl .bashrc
+# add maven path
+export MAVEN_HOME=/opt/apache-maven-3.5.2
+export PATH="${PATH}:${MAVEN_HOME}/bin"
+
+Maven: Building Blocks
+    Three Main Groups
+        - Goals : -Like Ant task - Plugin + goal name
+        - Phases : Map One or Many Goals Part of Greater Lifecycle
+        - Lifecycles
+- Create a Pom.xml :  Enter cmd: mvn compile
+- Adding to Git: -git status -git add pom.xml  - git status  -git commit -m "Adding minimal POM file to project" -git log
+Standard Directory Template:
+        <project root> 
+                        src     
+                                main/test    
+                                            java 
+                                                    resoureces 
+                                                                    webapp
+                                                                                groovy
+Creating directories : mkdir -p src/main/java   mkdir -p src/main/resources mkdir -p src/test/java mkdir -p src/test/resources
+
+Creating dummy files to git preserving i.e touch src/main/java/.gitKeep then commit files
+
+Create main appliction folder structure;
+
+
+Create a jar package mvn package
+
+
+Build OutputExecute jar file : java -cp maven-quick-start-1.0.jar maven.programming.training.Application 
+
+Clean : mnv clean
+
+Multiple Goals and Phases in Single Build: mvn clean package
+
+Local Maven Repository Cache of Dependencies and Build: mvn clean install
+git push origin master
+
+
+Plugins Overview : Maven Plugins
