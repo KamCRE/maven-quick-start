@@ -1,6 +1,6 @@
 Notes.txt
 
-target/
+my-app/target/
 # Compiled class file
 *.class
 
