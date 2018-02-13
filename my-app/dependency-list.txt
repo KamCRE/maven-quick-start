@@ -1,0 +1,17 @@
+[INFO] Scanning for projects...
+[INFO] 
+[INFO] ------------------------------------------------------------------------
+[INFO] Building my-app 1.0-SNAPSHOT
+[INFO] ------------------------------------------------------------------------
+[INFO] 
+[INFO] --- maven-dependency-plugin:2.8:tree (default-cli) @ my-app ---
+[INFO] com.mycompany.app:my-app:jar:1.0-SNAPSHOT
+[INFO] +- junit:junit:jar:3.8.1:test
+[INFO] \- org.apache.commons:commons-lang3:jar:3.7:compile
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD SUCCESS
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time: 1.304 s
+[INFO] Finished at: 2018-02-13T16:49:56+03:00
+[INFO] Final Memory: 13M/169M
+[INFO] ------------------------------------------------------------------------

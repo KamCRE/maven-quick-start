@@ -1,38 +1,52 @@
 package com.mycompany.app;
 
-import junit.framework.Test;
-import junit.framework.TestCase;
-import junit.framework.TestSuite;
-
+import org.junit.Before;
+import org.junit.Ignore;
+import org.junit.Test;
+import static org.junit.Assert.*;
 /**
  * Unit test for simple App.
  */
 public class AppTest 
-    extends TestCase
+  
 {
-    /**
-     * Create the test case
-     *
-     * @param testName name of the test case
-     */
-    public AppTest( String testName )
-    {
-        super( testName );
+    
+    private App app;
+    
+    @Before
+    public void setup() {
+        app = new App();
+    }
+    
+    
+    @Test
+    public void testWordCountString() {
+        int count = app.countWords("this is a test");
+        assertTrue(count == 4);
     }
 
-    /**
-     * @return the suite of tests being tested
-     */
-    public static Test suite()
-    {
-        return new TestSuite( AppTest.class );
+    @Test
+    public void testWordCountEmpty() {
+        int count = app.countWords("");
+        assertTrue(count == 0);
     }
 
-    /**
-     * Rigourous Test :-)
-     */
-    public void testApp()
-    {
-        assertTrue( true );
+    @Test
+    public void testWordCountNull() {
+        int count = app.countWords(null);
+        assertTrue(count == 0);
+    }
+
+    @Test
+    @Ignore
+    public void testWordCountMore() {
+        int count = app.countWords("this will be skipped");
+        assertTrue(count == 3);
+    }
+
+    @Test
+    public void testWordCountSingle() {
+        int count = app.countWords("test");
+        assertTrue(count == 1);
     }
 }

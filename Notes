@@ -53,3 +53,8 @@ git push origin master
 
 
 Plugins Overview : Maven Plugins
+
+mvn dependency:tree
+git commit -am "A string"
+
+mvn dependency:tree > dependency-list.txt
