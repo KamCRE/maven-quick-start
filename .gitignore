@@ -1,5 +1,7 @@
 Notes.txt
 
+my-app/.settings
+my-app/.classpath
 my-app/target/
 # Compiled class file
 *.class
